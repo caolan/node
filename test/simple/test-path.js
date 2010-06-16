@@ -10,7 +10,7 @@ assert.equal(path.dirname(f).substr(-11), "test/simple");
 assert.equal(path.dirname("/a/b"), "/a");
 assert.equal(path.dirname("/a"), "/");
 assert.equal(path.dirname("/"), "/");
-path.exists(f, function (y) { assert.equal(y, true) });
+path.exists(f, function (err, y) { assert.equal(y, true) });
 
 assert.equal(path.existsSync(f), true);
 
